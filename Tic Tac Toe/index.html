@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Canvas</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <style type="text/css">
+        body{
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            font-size: 2rem;
+            color: #eeeeee;
+        }
+        #pageHeader{
+            margin: auto;
+            text-align: center;
+            height: 20%;
+        }
+        h1, h2{
+            margin: 0;
+            padding: 10px;
+        }
+        #gameContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas{
+            background-color:#eeeeee;
+        }
+        #infoBoard{
+            display: flex;
+            flex-direction: column;
+            margin-left: 100px;
+        }
+        #turnTo{
+            color: #07689f;
+        }
+        #restart{
+            background-color: #eeeeee;
+            border: none;
+            padding: 15px 10px;
+            font-family: 'Montserrat';
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id='pageHeader'>
+            <h1>Tic Tac Toe by Nnevalti</h1>
+            <h2 id="result"></h2>
+    </div>
+    <div id="gameContainer">
+            <canvas id="canvas"></canvas>
+            <div id="infoBoard">
+                <div id="scoreBoard"><h3>Score :</h3> PlayerOne : <span id="player1">0</span> | PlayerTwo : <span id="player2">0</span></div>
+                <br>
+                <div>Turn to : <strong id="turnTo">PlayerOne</strong></div>
+                <br>
+                <button id="restart">RESTART</button>
+            </div>
+    </div>
+    <script src="canvas.js"></script>
+</body>
+</html>
